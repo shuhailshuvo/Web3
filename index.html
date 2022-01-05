@@ -589,19 +589,20 @@
     <script src="./dist/reveal.js"></script>
     <script>
       Reveal.initialize({
-  multiplex: {
-    // Example values. To generate your own, see the socket.io server instructions.
-    secret: null, // null so the clients do not have control of the master presentation
-    id: 'c0ac864259d5120f', // id, obtained from socket.io server
-    url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
-  },
+	 controls:false,
+	  multiplex: {
+	    // Example values. To generate your own, see the socket.io server instructions.
+	    secret: null, // null so the clients do not have control of the master presentation
+	    id: 'c0ac864259d5120f', // id, obtained from socket.io server
+	    url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
+	  },
 
-  // Don't forget to add the dependencies
-  dependencies: [
-    { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-    { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
-  ]
-});
+	  // Don't forget to add the dependencies
+	  dependencies: [
+	    { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+	    { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
+	  ]
+	});
 
       const loadScript = src => {
         return new Promise((resolve, reject) => {
